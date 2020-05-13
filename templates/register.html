@@ -1,0 +1,86 @@
+{% extends "basic.html" %}
+
+{%block body %}
+
+<div class="container" id="registering">
+	<div class="row">
+		<div class="col-sm-4 get_form_inner">
+									
+										<br><br><br>
+										<div class="jumbotron" >
+                                           <img class="avatar" src="{{url_for('static', filename='images/avatar.png')}}" align="middle" />
+
+										<form name="registerForm" method="post" action="">
+											
+                                            <div class="group">
+												<input type="text" required="required" >
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>REFERAL CODE</label>
+											</div>              
+											<br>                              
+                                            <div class="group">
+												<input type="text" name="LastName" required="required">
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Enter Name</label>
+                                                
+											</div>
+											<br>                                            
+                                          
+                                           
+                                            <div class="group">
+												<input type="number" name="Phone" required="required">
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Phone Number</label>
+											</div>
+											
+												<br>                                            
+                                          
+											  <div class="group">
+												<input type="email" name="Email" required="">
+                                                <span class="smessage"></span>
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Email Adress</label>
+                                                
+											</div>
+											<div class="group">
+												<input type="password" id="password" required="required"><input type="hidden" name="profile" value="Trainer">	
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Password</label>
+                                                
+											</div>
+                                            <br>
+                                            <div class="group">
+												<input type="password" name="confirm_password" required="required" id="confirm_password" onchange='check_pass();'><input type="hidden" name="profile" value="Trainer">	
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Confirm Password</label>
+                                                
+											</div>
+
+                                             
+                                     <!--        <input type="password" name="confirm_password" id="confirm_password" onchange='check_pass();'/>
+  -->
+    
+
+											<div class="form-group">                                   
+<label class="myCheckbox">
+  <input type="checkbox" name="test" />
+  <span></span>
+</label>
+By registering, I agree Sports Fight <a href="" target="_blank">T&C</a><br>
+											<div class="form-group text-center">
+												<br>
+												<div>
+													<button type="submit" id="submit" class="btn btn-info">Register</button>
+												</div>
+												
+											</div>
+											<div >
+												<p class="text-center">Already a user? <a href="{{url_for('login')}} ">Login </a></p>
+											</div>
+										</form>
+									</div>
+									</div>
+	</div>
+</div>
+
+{% endblock%}

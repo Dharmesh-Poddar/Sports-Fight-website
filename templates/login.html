@@ -1,0 +1,51 @@
+{% extends "basic.html" %}
+
+{%block body %}
+
+<div class="container" id="registering">
+	<div class="row">
+		<div class="col-sm-4 get_form_inner">
+									
+										<br><br><br>
+										<div class="jumbotron" >
+                                           <img class="avatar" src="{{url_for('static', filename='images/avatar.png')}}" align="middle" />
+
+										<form name="registerForm" method="post" action="">
+											
+                                            
+                                          
+											  <div class="group">
+												<input type="email" name="Email" required="">
+                                                <span class="smessage"></span>
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Email Adress</label>
+                                                
+											</div>
+											<div class="group">
+												<input type="password" id="password" required="required"><input type="hidden" name="profile" value="Trainer">	
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span><label>Password</label>
+                                                
+											</div>
+                                            
+                                           
+
+                                   
+
+
+											<div class="form-group text-right">Forgot Password<br><br><a href="" target="_blank"></a>
+											<div class="form-group text-center">
+												<div>
+													<span>Not a member?<a href="{{url_for('register')}}"> Register</a></span><br><br>
+													<button type="submit" id="submit" class="btn btn-info">Next</button>
+												</div>
+												
+											</div>
+											
+										</form>
+									</div>
+									</div>
+	</div>
+</div>
+
+{% endblock%}
